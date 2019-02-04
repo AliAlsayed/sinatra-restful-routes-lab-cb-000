@@ -21,6 +21,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes/:id' do
+    fail
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     redirect '/recipes'
